@@ -11,20 +11,19 @@ namespace ProgramTaxi
         //properties
         public string DriverName { get; set; }
         public bool OnDuty { get; set; }
-        
         public int NumPassenger { get; set; }
 
         //method
         public void TaxiInfo()
         {
             Console.WriteLine("Driver Name : {0}", DriverName);
-            Console.WriteLine("On Duty : {0}", OnDuty);
+            Console.WriteLine("On Duty : {0}", (OnDuty == true) ? "Yes" : "No");
             Console.WriteLine("Number of Passenger : {0}", NumPassenger);
         }
 
         public void PickUpPassenger()
         {
-            Console.WriteLine("{0} sedang menjemput penumpang", DriverName);
+            Console.WriteLine("\n{0} sedang menjemput penumpang", DriverName);
         }
 
         public void DropOffPassenger()
